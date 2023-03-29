@@ -1,0 +1,77 @@
+*{
+  transition: all 0.4s ease-in-out
+}
+body {
+    margin: 0;
+}
+
+.parent{
+    font-family:'Raleway', sans-serif ;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  
+  
+}
+
+.container-body{
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 10px;
+    width: 580px;
+}
+
+.quotes{
+    padding: 25px;
+    font-weight: 500;
+    font-size: 1.75em;
+    text-align: center;
+    margin: 5% 8%;
+}
+
+.right-align{
+    float: right;
+    margin-right: 20%;
+    padding: 0px;
+    font-size: 1.4em;
+    margin-top: -5%;
+}
+
+#new-quote{
+    color: #fff;
+    border-radius: 2px;
+    background: #472e32;
+    padding: 9px;
+    float: right;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+
+}
+
+.social-medias{
+    padding: 30px;
+    
+}
+
+.bg{
+    
+    background: #472e32;
+    color: #fff;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .container-body{
+    font-size: small;
+    width: 80%;
+    margin: 0% 10%;
+  }
+}
