@@ -26,7 +26,7 @@ const QuoteBody = () =>{
   const getQuote = useCallback(() => {
     setIsLoading(true);
 
-    fetch("https://zenquotes.io/api/random")
+    fetch("https://dummyjson.com/quotes/random?limit=1")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -36,8 +36,8 @@ const QuoteBody = () =>{
       .then((data) => {
         console.log(data);
         setQuoteInfo({
-          text: data[0].q || "No quote available",
-          author: data[0].a || "Unknown",
+          text: data.quote || "No quote available",
+          author: data.author || "Unknown",
         });
 
         let randColorIndex = Math.floor(Math.random() * colors.length);
@@ -54,7 +54,7 @@ const QuoteBody = () =>{
         setIsLoading(false);
       });
  
-  }, [colors]);
+  }, []);
 
   useEffect(() => {
     getQuote();
